@@ -118,9 +118,12 @@ export default Vue.extend({
       const { x, y } = this.absolutePosition
 
       ee.emit(ee.Event.ScrollTo, { x: x - 200, y: y - 150 })
+
+      console.log(111)
       this.startFocus()
     })
     ee.on(ee.Event.Focus, (id: string) => {
+      console.log(22222, 33)
       if (id !== this.data.id) {
         this.blur()
       } else {
